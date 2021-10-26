@@ -24,6 +24,7 @@ const createStudent = (fullName) => {
     avarage: "",
   });
 };
+
 // Function to create a row in the table for each student
 const createTableRow = (student) => {
   tableRow = document.createElement("tr");
