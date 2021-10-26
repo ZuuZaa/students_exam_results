@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="exam" />
+    <meta name="description" content="Students Exam Success Measure" />
+    <meta name="author" content="Zumrud Nerman" />
+    <title>Exam Success</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+    <!-- The Modal -->
+    <div id="modal-field" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <div class="d-flex justify-content-end"><span class="close" id="close-span">&times;</span></div>
+        <form id="exam-success-form" class="form-inline">
+          <div class="col-3">
+            <label for="subjectSelect">Imtahan adı</label>
+            <select class="custom-select form-control w-100" id="subjectSelect" name="subject">
+              <option selected>Riyaziyyat</option>
+              <option>Fizika</option>
+              <option>Kimya</option>
+            </select>
+          </div>
+          <div class="col-3">
+            <label for="result" class="text-left">Qiymət</label>
+            <input type="number" class="form-control w-100" id="result" name="result" required />
+          </div>
+          <button type="submit" name="exam-result-submit" class="btn btn-success px-5 ml-auto">
+            Əlavə et
+          </button>
+        </form>
+        <table class="table w-100 mx-3 my-5" id="resultsTable">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Imtahan</th>
+                <th scope="col">Qiymət</th>
+              </tr>
+            </thead>
+            <tbody id="results-table-body">
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-end">
+            <button type="submit" name="student-submit" class="btn btn-success px-5" id="close-btn">
+              Bağla
+            </button>
+          </div>
+      </div>
+    </div>
+
+    <div class="form-field my-5">
+      <div class="text-center my-3 font-weight-bold">Tələbə siyahısı</div>
+      <form id="student-submit-form" class="px-5">
+        <div class="form-group p-3">
+          <label for="name" class="text-muted">Tələbənin tam adı</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control text-muted"
+          />
+        </div>
+        <div class="d-flex justify-content-end">
+          <button type="submit" name="student-submit" class="btn btn-success px-5">
+            Əlavə et
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="table-field mx-5 px-3">
+      <table class="table" id="studentsTable">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Tələbə adı</th>
+            <th scope="col">İmtahan</th>
+            <th scope="col">Minimum qiymət</th>
+            <th scope="col">Maksimum qiymət</th>
+            <th scope="col">Ortalama</th>
+          </tr>
+        </thead>
+        <tbody id="students-table-body">
+        </tbody>
+      </table>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
