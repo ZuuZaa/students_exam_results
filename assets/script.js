@@ -124,7 +124,7 @@ const closeModal = (index) => {
     for (const exam in examResultsList) {
       resultArr.push(parseInt(examResultsList[exam]["result"]));
     }
-    resultArr.sort();
+    resultArr.sort((a,b) => {return a-b});
     students[index]["bestPerformance"] = resultArr[0];
     students[index]["lowestPerformance"] = resultArr[resultArr.length - 1];
     students[index]["avarage"] = average(resultArr);
