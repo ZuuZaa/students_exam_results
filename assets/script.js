@@ -102,7 +102,6 @@ examSuccessForm.addEventListener("submit", function (e) {
   const subject = e.currentTarget.subject.value;
   const result = e.currentTarget.result.value;
   const check = examResultsList.find((exam) => exam.subject === subject);
-  console.log(result)
   if (check) {
     examResultsList[examResultsList.indexOf(check)]["result"] = result;
   } else {
@@ -111,14 +110,12 @@ examSuccessForm.addEventListener("submit", function (e) {
       result,
     });
   }
-
-
   updateResultsTable();
   examSuccessForm.reset();
 });
 
 // Avarage exam result
-const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
+const average = (arr) => (arr.reduce((a, b) => { console.log(a, b); return a + b; }, 0) / arr.length) || "";
 // Add exam results to student object
 const closeModal = (index) => {
   if (examResultsList) {
