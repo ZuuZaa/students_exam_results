@@ -24,34 +24,36 @@
             </div>
             <form id="exam-success-form" class="form-inline">
                 <div class="col-3">
-                    <label for="subjectSelect">Imtahan adı</label>
+                    <label for="subjectSelect">Subject</label>
                     <select class="custom-select form-control w-100" id="subjectSelect" name="subject">
-                        <option selected>Riyaziyyat</option>
-                        <option>Fizika</option>
-                        <option>Kimya</option>
+                        <option selected>Mathematics</option>
+                        <option>English</option>
+                        <option>Physics</option>
+                        <option>Chemistry</option>
+                        <option>History</option>
                     </select>
                 </div>
                 <div class="col-3">
-                    <label for="result" class="text-left">Qiymət</label>
+                    <label for="result" class="text-left">Result</label>
                     <input type="number" class="form-control w-100" id="result" name="result" required />
                 </div>
                 <button type="submit" name="exam-result-submit" class="btn btn-success px-5 ml-auto">
-                    Əlavə et
+                    Add Result
                 </button>
             </form>
             <table class="table w-100 mx-3 my-5" id="resultsTable">
                 <thead>
                     <tr>
                         <th scope="col"></th>
-                        <th scope="col">Imtahan</th>
-                        <th scope="col">Qiymət</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Result</th>
                     </tr>
                 </thead>
                 <tbody id="results-table-body"></tbody>
             </table>
             <div class="d-flex justify-content-end">
                 <button type="submit" name="student-submit" class="btn btn-success px-5" id="close-btn">
-                    Bağla
+                    Save and Close
                 </button>
             </div>
         </div>
@@ -59,15 +61,15 @@
     <!-- End of Modal -->
     <!-- Student name submitting form -->
     <div class="form-field my-5">
-        <div class="text-center my-3 font-weight-bold">Tələbə siyahısı</div>
+        <div class="text-center my-3 font-weight-bold">STUDENTS</div>
         <form id="student-submit-form" class="px-5">
             <div class="form-group p-3">
-                <label for="name" class="text-muted">Tələbənin tam adı</label>
+                <label for="name" class="text-muted">Student's full name</label>
                 <input type="text" name="name" id="name" class="form-control text-muted" />
             </div>
             <div class="d-flex justify-content-end">
                 <button type="submit" name="student-submit" class="btn btn-success px-5">
-                    Əlavə et
+                    Add New Student
                 </button>
             </div>
         </form>
@@ -79,11 +81,11 @@
             <thead>
                 <tr>
                     <th scope="col"></th>
-                    <th scope="col">Tələbə adı</th>
-                    <th scope="col">İmtahan</th>
-                    <th scope="col">Minimum qiymət</th>
-                    <th scope="col">Maksimum qiymət</th>
-                    <th scope="col">Ortalama</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Lower Result</th>
+                    <th scope="col">Best Result</th>
+                    <th scope="col">Avarage</th>
                 </tr>
             </thead>
             <tbody id="students-table-body"></tbody>

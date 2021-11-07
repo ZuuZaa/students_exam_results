@@ -35,7 +35,7 @@ const createTableRow = (student) => {
     const tableCell = document.createElement("td");
     if (key == "examList") {
       anchor = document.createElement("a");
-      anchor.textContent = "Imtahan";
+      anchor.textContent = "Exam Results";
       anchor.setAttribute("class", "text-info");
       anchor.addEventListener("click", () => {
         modal.style.display = "block";
