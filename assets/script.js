@@ -115,7 +115,7 @@ examSuccessForm.addEventListener("submit", function (e) {
 });
 
 // Avarage exam result
-const average = (arr) => (arr.reduce((a, b) => { console.log(a, b); return a + b; }, 0) / arr.length) || "";
+const average = arr => Math.round((arr.reduce((a, b) => { return a + b; }, 0) / arr.length))  || "";
 // Add exam results to student object
 const closeModal = (index) => {
   if (examResultsList) {
